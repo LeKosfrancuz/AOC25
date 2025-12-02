@@ -59,6 +59,7 @@ func Process(file_name string) {
 	invalid_id_sum := 0
 
 	for input_scanner.Scan() {
+		// Parse and create the id_range struct
 		var id_range Id_range
 		{
 			id_range_text := strings.Trim(input_scanner.Text(), "\n")
@@ -80,6 +81,8 @@ func Process(file_name string) {
 		}
 
 		ids := find_invalid_ids_in_range(id_range)
+
+		// Sum all the invalid ids
 		for i := range ids {
 			invalid_id_sum += ids[i]
 		}
@@ -129,6 +132,7 @@ func is_id_invalid(id int) bool {
 
 	repetition_len /= 2
 
+	// Check repetition for every repetition length
 	for repetition_len > 0 {
 		pattern := str_id[0:repetition_len]
 		if DEBUG {
