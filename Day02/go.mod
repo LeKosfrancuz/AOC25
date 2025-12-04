@@ -1,1 +1,1 @@
-module AOC25_Day01
+module AOC25_Day02

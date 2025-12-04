@@ -1,8 +1,8 @@
 package main
 
 import (
-	"AOC25_Day02/part1"
-	"AOC25_Day02/part2"
+	"AOC25_Day03/part1"
+	"AOC25_Day03/part2"
 	"fmt"
 	"os"
 )
